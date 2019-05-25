@@ -1,0 +1,28 @@
+.block-container {
+  display: block;
+}
+
+.flex-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-type-icon {
+  float: right;
+  height: 16px;
+  width: 16px;
+}
+
+.item-inner {
+  border-bottom-color: #000000 !important;
+}
+
+.light-text {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.sad-icon {
+  font-size: 4rem;
+}

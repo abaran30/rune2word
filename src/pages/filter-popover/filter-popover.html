@@ -1,0 +1,48 @@
+<ion-list class="popover-page">
+  <ion-item>
+    <ion-label>Item Types</ion-label>
+    <ion-select [(ngModel)]="filters.selectedItemTypes" multiple="true" cancelText="Cancel" okText="OK">
+      <ion-option value="Armor">Armor</ion-option>
+      <ion-option value="Helm">Helm</ion-option>
+      <ion-option value="Shield">Shield</ion-option>
+      <ion-option value="Weapon">Weapon</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="weaponItemTypeIsSelected()">
+    <ion-label>Weapon Classes</ion-label>
+    <ion-select [(ngModel)]="filters.selectedWeaponClasses" multiple="true" cancelText="Cancel" okText="OK">
+      <ion-option value="Axe">Axe</ion-option>
+      <ion-option value="Claw">Claw</ion-option>
+      <ion-option value="Club">Club</ion-option>
+      <ion-option value="Hammer">Hammer</ion-option>
+      <ion-option value="Mace">Mace</ion-option>
+      <ion-option value="Missile">Missile</ion-option>
+      <ion-option value="Orb">Orb</ion-option>
+      <ion-option value="Polearm">Polearm</ion-option>
+      <ion-option value="Scepter">Scepter</ion-option>
+      <ion-option value="Staff">Staff</ion-option>
+      <ion-option value="Sword">Sword</ion-option>
+      <ion-option value="Wand">Wand</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>No. of Sockets</ion-label>
+    <ion-select [(ngModel)]="filters.numberOfSockets" multiple="true" cancelText="Cancel" okText="OK">
+      <ion-option value="2">2</ion-option>
+      <ion-option value="3">3</ion-option>
+      <ion-option value="4">4</ion-option>
+      <ion-option value="5">5</ion-option>
+      <ion-option value="6">6</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Runes</ion-label>
+    <ion-select [(ngModel)]="filters.selectedRunes" multiple="true" cancelText="Cancel" okText="OK">
+      <ion-option *ngFor="let rune of runes" value="{{ rune }}">{{ rune }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <div class="float-right">
+    <button ion-button color="dark" (click)="clearFilters()">Clear</button>
+    <button ion-button color="primary" (click)="applyFiltersAndDismiss()">Apply</button>
+  </div>
+</ion-list>

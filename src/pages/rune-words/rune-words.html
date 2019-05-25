@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Rune Words</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-searchbar [animated]="true" (ionInput)="filterRuneWordItems($event)"></ion-searchbar>
+  <ion-list>
+    <button ion-item *ngFor="let item of runeWordItems | runeWordFilter: activeFilters.selectedItemTypes : activeFilters.selectedWeaponClasses
+      : activeFilters.numberOfSockets : activeFilters.selectedRunes"
+      (click)="openModal(item)">
+      <div class="flex-container">
+        <div class="block-container">
+            <div class="unique-text">{{ item.name }}</div>
+            <div class="light-text">{{ getItemRuneWord(item) }}</div>
+        </div>
+        <img class="item-type-icon" [src]="getItemTypeIconPath(item.itemType)">
+      </div>
+    </button>
+    <div *ngIf="(runeWordItems | runeWordFilter: activeFilters.selectedItemTypes : activeFilters.selectedWeaponClasses
+      : activeFilters.numberOfSockets : activeFilters.selectedRunes).length === 0"
+      text-center>
+      <ion-icon class="sad-icon" name="sad"></ion-icon>
+      <p>No Rune Words found.</p>
+    </div>
+  </ion-list>
+</ion-content>

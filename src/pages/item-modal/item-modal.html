@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <span class="unique-text">{{ runeWordItem.name }}</span>
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content text-center padding>
+  <p class="main-text unique-text">{{ getItemRuneWord() }}</p>
+  <img *ngFor="let rune of runeWordItem.runes" [src]="getRuneImageUrl(rune)">
+  <p>Sockets: {{ runeWordItem.sockets }}</p>
+  <p>Required level: {{ getLevelRequirementText() }}</p>
+  <p>Item type: {{ runeWordItem.itemType }}</p>
+  <p *ngIf="runeWordItem.itemType === 'Weapon'">Weapon class: {{ getWeaponTypesText() }}</p>
+  <p class="main-text invalid-text" *ngIf="runeWordItem.ladderOnly">Ladder Only</p>
+  <p class="main-text magic-text" *ngFor="let property of runeWordItem.properties">
+    &#9642; {{ property }}
+  </p>
+</ion-content>

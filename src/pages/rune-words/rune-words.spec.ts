@@ -1,0 +1,96 @@
+import { async, TestBed } from '@angular/core/testing';
+import { IonicModule } from 'ionic-angular';
+
+import { RuneWordsPage } from './rune-words';
+import { RuneWordDataService } from '../../data/runeword-data.service';
+import { PipesModule } from '../../pipes/pipes.module';
+
+describe('RuneWordsPage Component', () => {
+  let fixture;
+  let component;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [RuneWordsPage],
+      imports: [
+        IonicModule.forRoot(RuneWordsPage),
+        PipesModule
+      ],
+      providers: [RuneWordDataService]
+    })
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(RuneWordsPage);
+    component = fixture.componentInstance;
+  });
+
+  it('should be created', () => {
+    expect(component instanceof RuneWordsPage).toBe(true);
+  });
+
+  it('should successfully load Rune Word data from the service', () => {
+    component.getData();
+    expect(component.runeWordItems.length > 0);
+  });
+
+  it('should load Rune Word data on view load', () => {
+    const spy = spyOn(component, 'getData');
+    component.ionViewDidLoad();
+    expect(component.getData).toHaveBeenCalled();
+  });
+
+  it('should get the correct item Rune Word name', () => {
+    const runeWordItem = {
+      'name': 'Breath of the Dying',
+      'runes': [
+        'Vex',
+        'Hel',
+        'El',
+        'Eld',
+        'Zod',
+        'Eth'
+      ],
+      'sockets': 6,
+      'highestRune': 'Zod',
+      'itemType': 'Weapon',
+      'itemTypeSecondary': [
+        'Axe',
+        'Hammer',
+        'Mace',
+        'Polearm',
+        'Staff',
+        'Sword',
+        'Missile'
+      ],
+      'requiredLevel': 69,
+      'ladderOnly': false,
+      'properties': [
+        '35% Chance to Cast Level 20 Poison Nova When You Kill an Enemy',
+        'Indestructible',
+        '+60% Increased Attack Speed',
+        '+350-400% Enhanced Damage',
+        '+200% Damage to Undead',
+        '-25% Target Defense',
+        '+50 to Attack Rating',
+        '+50 to Attack Rating Against Undead',
+        '7% Mana Stolen per Hit',
+        '12-15% Life Stolen per Hit',
+        'Prevent Monster Heal',
+        '+30 to All Attributes',
+        '+1 to Light Radius',
+        'Requirements -20%'
+      ]
+    };
+    const itemRuneWord = component.getItemRuneWord(runeWordItem);
+    expect(itemRuneWord).toEqual('\'VexHelElEldZodEth\'');
+  });
+
+  it('should filter Rune Words', () => {
+    component.filterRuneWordItems({ target: { value: '' } });
+    expect(component.runeWordItems.length).toEqual(82);
+
+    component.filterRuneWordItems({ target: { value: 'Breath of the Dying' } });
+    expect(component.runeWordItems.length).toEqual(1);
+  });
+});
