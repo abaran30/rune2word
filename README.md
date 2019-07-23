@@ -10,9 +10,9 @@ All of the data for this application is static in an exported TypeScript variabl
 
 ## How to Set Up and Run Locally with Ionic
 ### Prerequisites
-+ Make sure [Git](https://git-scm.com/) is installed and configured on your machine.
++ Make sure [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/), and [npm](https://www.npmjs.com/) are installed and configured on your machine.
 
-+ Install [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/). Then, use `npm` to install [Ionic](https://ionicframework.com/) with the command:
++ Use `npm` to install [Ionic](https://ionicframework.com/) with the command:
 ``` bash
 npm install -g cordova ionic
 ```
