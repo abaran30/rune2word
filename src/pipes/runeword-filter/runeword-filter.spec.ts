@@ -26,11 +26,11 @@ describe('RuneWordFilterPipe', () => {
 
     // Item Type: Weapon
     const runewordsFilteredByItemTypeWeapon = pipe.transform(runeWordDataService.getData(), ['Weapon'], [], [], []);
-    expect(runewordsFilteredByItemTypeWeapon.length).toEqual(48);
+    expect(runewordsFilteredByItemTypeWeapon.length).toEqual(49);
 
     // Item Type: Armor and Weapon
     const runewordsFilteredByItemTypeArmorAndWeapon = pipe.transform(runeWordDataService.getData(), ['Armor', 'Weapon'], [], [], []);
-    expect(runewordsFilteredByItemTypeArmorAndWeapon.length).toEqual(68);
+    expect(runewordsFilteredByItemTypeArmorAndWeapon.length).toEqual(69);
   });
 
   it('should correctly transform input based on Weapon Class', () => {
@@ -71,7 +71,7 @@ describe('RuneWordFilterPipe', () => {
 
     // Weapon Class: Scepter
     const runewordsFilteredByWeaponClassScepter = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Scepter'], [], []);
-    expect(runewordsFilteredByWeaponClassScepter.length).toEqual(17);
+    expect(runewordsFilteredByWeaponClassScepter.length).toEqual(18);
 
     // Weapon Class: Staff
     const runewordsFilteredByWeaponClassStaff = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Staff'], [], []);
@@ -118,7 +118,7 @@ describe('RuneWordFilterPipe', () => {
 
     // No. of Sockets: 5
     const runewordsFilteredByNumberOfSockets5 = pipe.transform(runeWordDataService.getData(), [], [], ['5'], []);
-    expect(runewordsFilteredByNumberOfSockets5.length).toEqual(8);
+    expect(runewordsFilteredByNumberOfSockets5.length).toEqual(9);
 
     // No. of Sockets: 6
     const runewordsFilteredByNumberOfSockets6 = pipe.transform(runeWordDataService.getData(), [], [], ['6'], []);
@@ -140,7 +140,7 @@ describe('RuneWordFilterPipe', () => {
     // Runes: Ral, Tir, Tal, Sol, Ort
     const runewordsFilteredByMultipleRunes = pipe.transform(runeWordDataService.getData(), [], [], [], ['Ral', 'Tir', 'Tal', 'Sol',
       'Ort']);
-    expect(runewordsFilteredByMultipleRunes.length).toEqual(38);
+    expect(runewordsFilteredByMultipleRunes.length).toEqual(39);
   });
 
   it('should return all items when no transformation is performed', () => {
@@ -148,6 +148,6 @@ describe('RuneWordFilterPipe', () => {
     const runeWordDataService = new RuneWordDataService();
 
     const runewords = pipe.transform(runeWordDataService.getData(), [], [], [], []);
-    expect(runewords.length).toEqual(82);
+    expect(runewords.length).toEqual(83);
   });
 });

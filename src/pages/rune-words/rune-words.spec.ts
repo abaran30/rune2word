@@ -88,7 +88,7 @@ describe('RuneWordsPage Component', () => {
 
   it('should filter Rune Words', () => {
     component.filterRuneWordItems({ target: { value: '' } });
-    expect(component.runeWordItems.length).toEqual(82);
+    expect(component.runeWordItems.length).toEqual(83);
 
     component.filterRuneWordItems({ target: { value: 'Breath of the Dying' } });
     expect(component.runeWordItems.length).toEqual(1);

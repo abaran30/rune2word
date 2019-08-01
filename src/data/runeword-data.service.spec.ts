@@ -15,7 +15,7 @@ describe('RuneWordDataService', () => {
   }));
 
   it('should successfully get data', inject([RuneWordDataService], (service: RuneWordDataService) => {
-    expect(service.getData().length).toEqual(82);
+    expect(service.getData().length).toEqual(83);
   }));
 
   it('should successfully get an Item Rune Word', inject([RuneWordDataService], (service: RuneWordDataService) => {
