@@ -14,7 +14,7 @@ All of the data for this application is static in an exported TypeScript variabl
 
 + Use `npm` to install [Ionic](https://ionicframework.com/) with the command:
 ``` bash
-npm install -g cordova ionic
+npm install -g @ionic/cli
 ```
 Refer to [Ionic's getting started guide](https://ionicframework.com/getting-started/).
 
