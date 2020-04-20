@@ -20,6 +20,6 @@
   <p *ngIf="runeWordItem.itemType === 'Weapon'">Weapon class: {{ getWeaponTypesText() }}</p>
   <p class="main-text invalid-text" *ngIf="runeWordItem.ladderOnly">Ladder Only</p>
   <p class="main-text magic-text" *ngFor="let property of runeWordItem.properties">
-    &#9642; {{ property }}
+    <span class="property-bullet">&#9642;</span> {{ property }}
   </p>
 </ion-content>
