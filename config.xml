@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.rune2word" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.ionic.rune2word" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:android="schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Rune2Word</name>
     <description>Browse and find Rune Words for "Diablo II: Lord of Destruction"</description>
     <author email="adrian.baran.30@gmail.com" href="https://github.com/abaran30">Adrian Baran</author>
@@ -13,6 +13,7 @@
     <allow-intent href="geo:*" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-targetSdkVersion" value="29" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="none" />
     <platform name="android">
