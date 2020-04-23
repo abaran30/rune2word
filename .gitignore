@@ -34,3 +34,5 @@ google-play/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+releases/

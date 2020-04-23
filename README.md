@@ -1,5 +1,7 @@
 # Rune2Word
 
+**This app has been built with Ionic 3.9.10 (Angular 5.0.3). For the time being, this app will only be updated with bug fixes and vulnerability patches.**
+
 Rune2Word is a mobile application that allows *Diablo II: Lord of Destruction* players to browse and find Rune Words. Rune Words can be filtered by item type (and by weapon class), number of sockets, and applicable runes.
 
 ## Development
@@ -47,14 +49,9 @@ npm test
 
 The unit testing is configured to generate an HTML coverage report. This report can be found in the `coverage` directory after unit tests have been run. Open `coverage/index.html` with your favorite browser, and you will see a detailed report of unit test coverage for this app.
 
-## Functional (E2E) Testing
-
-TBD
-
 ## Downloading the App
 
 Rune2Word is available to download from [Google Play](https://play.google.com/store/apps/details?id=io.ionic.rune2word). iOS app is TBD.
-
 
 ## Disclaimer
 
