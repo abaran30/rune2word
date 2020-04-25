@@ -1,14 +1,14 @@
 {
   "name": "rune2word",
-  "version": "1.1.5",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "version": "1.1.6",
+  "author": "Adrian Baran (using Ionic Framework)",
+  "homepage": "https://github.com/abaran30/rune2word",
   "private": true,
   "scripts": {
-    "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "start": "ionic-app-scripts serve",
+    "clean": "ionic-app-scripts clean",
     "lint": "ionic-app-scripts lint",
+    "start": "ionic-app-scripts serve",
     "test": "karma start ./test-config/karma.conf.js --single-run --coverage",
     "test-watch": "karma start ./test-config/karma.conf.js --coverage --source-map=false"
   },

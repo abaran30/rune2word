@@ -35,4 +35,5 @@ google-play/
 Thumbs.db
 UserInterfaceState.xcuserstate
 
+build-release.sh
 releases/
