@@ -1185,7 +1185,12 @@ export const runeWordData = [
     'highestRune': 'Sol',
     'itemType': 'Weapon',
     'itemTypeSecondary': [
-      'Scepter'
+      'Axe',
+      'Hammer',
+      'Mace',
+      'Polearm',
+      'Scepter',
+      'Sword'
     ],
     'requiredLevel': 27,
     'ladderOnly': false,
