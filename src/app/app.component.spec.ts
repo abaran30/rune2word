@@ -1,12 +1,12 @@
 import { async, TestBed } from '@angular/core/testing';
 import { IonicModule, Platform } from 'ionic-angular';
+import { mockPlatform } from 'ionic-angular/util/mock-providers';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import {
-  PlatformMock,
   SplashScreenMock,
   StatusBarMock
 } from '../../test-config/ionic.mocks';
@@ -22,7 +22,7 @@ describe('MyApp Component', () => {
       providers: [
         { provide: StatusBar, useClass: StatusBarMock },
         { provide: SplashScreen, useClass: SplashScreenMock },
-        { provide: Platform, useClass: PlatformMock }
+        { provide: Platform, useValue: mockPlatform() }
       ]
     })
   }));
