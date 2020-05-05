@@ -318,7 +318,7 @@ export const runeWordData = [
       'Adds 216-471 Magic Damage',
       '25% Chance of Open Wounds',
       '+1 to Whirlwind',
-      '+10 Strength to Strength',
+      '+10 to Strength',
       '+15 Life After Each Demon Kill'
     ]
   },

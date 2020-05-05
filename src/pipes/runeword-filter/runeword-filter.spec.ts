@@ -39,7 +39,7 @@ describe('RuneWordFilterPipe', () => {
 
     // Weapon Class: Axe
     const runewordsFilteredByWeaponClassAxe = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Axe'], [], []);
-    expect(runewordsFilteredByWeaponClassAxe.length).toEqual(23);
+    expect(runewordsFilteredByWeaponClassAxe.length).toEqual(24);
 
     // Weapon Class: Claw
     const runewordsFilteredByWeaponClassClaw = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Claw'], [], []);
@@ -51,11 +51,11 @@ describe('RuneWordFilterPipe', () => {
 
     // Weapon Class: Hammer
     const runewordsFilteredByWeaponClassHammer = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Hammer'], [], []);
-    expect(runewordsFilteredByWeaponClassHammer.length).toEqual(19);
+    expect(runewordsFilteredByWeaponClassHammer.length).toEqual(20);
 
     // Weapon Class: Mace
     const runewordsFilteredByWeaponClassMace = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Mace'], [], []);
-    expect(runewordsFilteredByWeaponClassMace.length).toEqual(18);
+    expect(runewordsFilteredByWeaponClassMace.length).toEqual(19);
 
     // Weapon Class: Missile
     const runewordsFilteredByWeaponClassMissile = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Missile'], [], []);
@@ -67,7 +67,7 @@ describe('RuneWordFilterPipe', () => {
 
     // Weapon Class: Polearm
     const runewordsFilteredByWeaponClassPolearm = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Polearm'], [], []);
-    expect(runewordsFilteredByWeaponClassPolearm.length).toEqual(21);
+    expect(runewordsFilteredByWeaponClassPolearm.length).toEqual(22);
 
     // Weapon Class: Scepter
     const runewordsFilteredByWeaponClassScepter = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Scepter'], [], []);
@@ -79,7 +79,7 @@ describe('RuneWordFilterPipe', () => {
 
     // Weapon Class: Sword
     const runewordsFilteredByWeaponClassSword = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Sword'], [], []);
-    expect(runewordsFilteredByWeaponClassSword.length).toEqual(25);
+    expect(runewordsFilteredByWeaponClassSword.length).toEqual(26);
 
     // Weapon Class: Wand
     const runewordsFilteredByWeaponClassWand = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Wand'], [], []);
@@ -87,7 +87,7 @@ describe('RuneWordFilterPipe', () => {
 
     // Weapon Class: Axe and Sword
     const runewordsFilteredByWeaponClassAxeAndSword = pipe.transform(runeWordDataService.getData(), ['Weapon'], ['Axe', 'Sword'], [], []);
-    expect(runewordsFilteredByWeaponClassAxeAndSword.length).toEqual(20);
+    expect(runewordsFilteredByWeaponClassAxeAndSword.length).toEqual(21);
 
     // All Weapon Classes
     const runewordsFilteredByAllWeaponClasses = pipe.transform(runeWordDataService.getData(), ['Weapon'],
