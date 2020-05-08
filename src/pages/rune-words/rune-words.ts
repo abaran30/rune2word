@@ -3,7 +3,6 @@ import { ModalController, PopoverController } from 'ionic-angular';
 
 import { ItemModalPage } from '../item-modal/item-modal';
 import { FilterPopoverPage } from '../filter-popover/filter-popover';
-
 import { RuneWordDataService } from '../../data/runeword-data.service';
 import { RuneWordItem } from '../../data/runeword-item.model';
 

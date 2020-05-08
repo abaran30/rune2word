@@ -14,11 +14,11 @@ describe('RuneWordDataService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('should successfully get data', inject([RuneWordDataService], (service: RuneWordDataService) => {
+  it('should get data', inject([RuneWordDataService], (service: RuneWordDataService) => {
     expect(service.getData().length).toEqual(83);
   }));
 
-  it('should successfully get an Item Rune Word', inject([RuneWordDataService], (service: RuneWordDataService) => {
+  it('should get an Item Rune Word', inject([RuneWordDataService], (service: RuneWordDataService) => {
     const runeWordItem: RuneWordItem = {
       'name': 'Breath of the Dying',
       'runes': [
@@ -64,7 +64,7 @@ describe('RuneWordDataService', () => {
     expect(service.getItemRuneWord(runeWordItem)).toEqual('\'VexHelElEldZodEth\'');
   }));
 
-  it('should successfully get Runes', inject([RuneWordDataService], (service: RuneWordDataService) => {
+  it('should get Runes', inject([RuneWordDataService], (service: RuneWordDataService) => {
     expect(service.getRunes().length).toEqual(33);
   }));
 });

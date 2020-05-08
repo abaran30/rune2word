@@ -30,7 +30,7 @@ export class ItemModalPage {
     return `${this.runeWordItem.requiredLevel} (${this.runeWordItem.highestRune})`;
   }
 
-  getRuneImageUrl(rune: string) {
+  getRuneImagePath(rune: string) {
     return `assets/imgs/runes/${rune.toLocaleLowerCase()}.png`;
   }
 

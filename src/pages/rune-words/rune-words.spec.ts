@@ -1,5 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
-import { IonicModule } from 'ionic-angular';
+import { IonicModule, Modal, Popover } from 'ionic-angular';
 
 import { RuneWordsPage } from './rune-words';
 import { RuneWordDataService } from '../../data/runeword-data.service';
@@ -29,7 +29,7 @@ describe('RuneWordsPage Component', () => {
     expect(component instanceof RuneWordsPage).toBe(true);
   });
 
-  it('should successfully load Rune Word data from the service', () => {
+  it('should load Rune Word data from the service', () => {
     component.getData();
     expect(component.runeWordItems.length > 0);
   });
@@ -40,7 +40,23 @@ describe('RuneWordsPage Component', () => {
     expect(component.getData).toHaveBeenCalled();
   });
 
-  it('should get the correct item Rune Word name', () => {
+  it('should open the modal', () => {
+    const mockModal = new Modal(undefined, undefined, undefined, undefined, undefined, undefined);
+    const spy = spyOn(component.modalCtrl, 'create').and.returnValue(mockModal);
+    const popoverSpy = spyOn(mockModal, 'present');
+    component.openModal(undefined);
+    expect(mockModal.present).toHaveBeenCalled();
+  });
+
+  it('should present the popover', () => {
+    const mockPopover = new Popover(undefined, undefined, undefined, undefined, undefined, undefined);
+    const spy = spyOn(component.popoverCtrl, 'create').and.returnValue(mockPopover);
+    const popoverSpy = spyOn(mockPopover, 'present');
+    component.presentPopover(undefined);
+    expect(mockPopover.present).toHaveBeenCalled();
+  });
+
+  it('should get the item Rune Word name', () => {
     const runeWordItem = {
       'name': 'Breath of the Dying',
       'runes': [
@@ -92,5 +108,13 @@ describe('RuneWordsPage Component', () => {
 
     component.filterRuneWordItems({ target: { value: 'Breath of the Dying' } });
     expect(component.runeWordItems.length).toEqual(1);
+  });
+
+  it('should get the item type icon path', () => {
+    expect(component.getItemTypeIconPath('Armor')).toEqual('assets/imgs/armor.png');
+    expect(component.getItemTypeIconPath('Helm')).toEqual('assets/imgs/helm.png');
+    expect(component.getItemTypeIconPath('Shield')).toEqual('assets/imgs/shield.png');
+    expect(component.getItemTypeIconPath('Weapon')).toEqual('assets/imgs/weapon.png');
+    expect(component.getItemTypeIconPath('Invalid')).toEqual('');
   });
 });

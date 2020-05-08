@@ -13,7 +13,7 @@
 </ion-header>
 <ion-content text-center padding>
   <p class="main-text unique-text">{{ getItemRuneWord() }}</p>
-  <img *ngFor="let rune of runeWordItem.runes" [src]="getRuneImageUrl(rune)">
+  <img *ngFor="let rune of runeWordItem.runes" [src]="getRuneImagePath(rune)">
   <p>Sockets: {{ runeWordItem.sockets }}</p>
   <p>Required level: {{ getLevelRequirementText() }}</p>
   <p>Item type: {{ runeWordItem.itemType }}</p>

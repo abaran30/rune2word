@@ -8,7 +8,7 @@ describe('RuneWordFilterPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('should correctly transform input based on Item Type', () => {
+  it('should transform input based on Item Type', () => {
     const pipe = new RuneWordFilterPipe();
     const runeWordDataService = new RuneWordDataService();
 
@@ -33,7 +33,7 @@ describe('RuneWordFilterPipe', () => {
     expect(runewordsFilteredByItemTypeArmorAndWeapon.length).toEqual(69);
   });
 
-  it('should correctly transform input based on Weapon Class', () => {
+  it('should transform input based on Weapon Class', () => {
     const pipe = new RuneWordFilterPipe();
     const runeWordDataService = new RuneWordDataService();
 
@@ -100,7 +100,7 @@ describe('RuneWordFilterPipe', () => {
     expect(runewordsFilteredByAllWeaponClassesWithoutWeaponItemType.length).toEqual(0);
   });
 
-  it('should correctly transform input based on No. of Sockets', () => {
+  it('should transform input based on No. of Sockets', () => {
     const pipe = new RuneWordFilterPipe();
     const runeWordDataService = new RuneWordDataService();
 
@@ -129,7 +129,7 @@ describe('RuneWordFilterPipe', () => {
     expect(runewordsFilteredByNumberOfSockets2And3.length).toEqual(43);
   });
 
-  it('should correctly transform input based on Runes', () => {
+  it('should transform input based on Runes', () => {
     const pipe = new RuneWordFilterPipe();
     const runeWordDataService = new RuneWordDataService();
 

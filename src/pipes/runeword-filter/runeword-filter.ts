@@ -16,7 +16,9 @@ export class RuneWordFilterPipe implements PipeTransform {
 
     if (selectedWeaponClasses && selectedWeaponClasses.length > 0) {
       items = items.filter(
-        item => selectedWeaponClasses.every(weaponClass => item.itemType === 'Weapon' ? item.itemTypeSecondary.indexOf(weaponClass) > -1 : false)
+        item => selectedWeaponClasses.every(
+          weaponClass => item.itemType === 'Weapon' ? item.itemTypeSecondary.indexOf(weaponClass) > -1 : false
+        )
       );
     }
 
