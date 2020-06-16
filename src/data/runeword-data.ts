@@ -111,7 +111,7 @@ export const runeWordData = [
       '15% Chance to Cast level 10 Bone Armor When Struck',
       '15% Chance to Cast level 10 Bone Spear on Striking',
       '+2 to Necromancer Skill Levels',
-      '+50-150 to Mana',
+      '+100-150 to Mana',
       'All Resistances +30',
       'Damage Reduced by 7'
     ]
@@ -206,7 +206,7 @@ export const runeWordData = [
     'requiredLevel': 69,
     'ladderOnly': false,
     'properties': [
-      '35% Chance to Cast Level 20 Poison Nova When You Kill an Enemy',
+      '50% Chance to Cast Level 20 Poison Nova When You Kill an Enemy',
       'Indestructible',
       '+60% Increased Attack Speed',
       '+350-400% Enhanced Damage',
@@ -386,7 +386,7 @@ export const runeWordData = [
       'Adds 1-50 Lightning Damage',
       '7% Mana Stolen per Hit',
       '50% Chance of Crushing Blow',
-      '+0.5-49.5% Deadly Strike (Based on Character Level)',
+      '(0.5% per Character Level) Deadly Strike (Based on Character Level)',
       '+1 to Light Radius',
       'Level 22 Blood Golem (15 Charges)',
       'Requirements -20%'
@@ -514,7 +514,7 @@ export const runeWordData = [
       '+360 Defense',
       '+230 Defense vs. Missile',
       '+3-5 to All Attributes',
-      '+0.375-37.125 to Strength (Based on Character Level)',
+      '+(0.375 per Character Level) to Strength (Based on Character Level)',
       'Increase Maximum Mana 5%',
       '+5% to Maximum Lightning Resist',
       'Damage Reduced by 7'
@@ -542,7 +542,7 @@ export const runeWordData = [
       '+360 Defense',
       '+230 Defense vs. Missile',
       '+3-5 to All Attributes',
-      '+0.375-37.125 to Strength (Based on Character Level)',
+      '+(0.375 per Character Level) to Strength (Based on Character Level)',
       '+50 to Mana',
       '+5% to Maximum Lightning Resist',
       'Damage Reduced by 7'
@@ -571,7 +571,7 @@ export const runeWordData = [
       '+150-220 Defense',
       '+10 to Vitality',
       'Increase Maximum Life 5%',
-      '+0.625-61.875 to Mana (Based on Character Level)',
+      '+(0.625 per Character Level) to Mana (Based on Character Level)',
       'All Resistances +5-20',
       '12-25% Better Chance of Getting Magic Items'
     ]
@@ -599,7 +599,7 @@ export const runeWordData = [
       '+150-220 Defense',
       '+10 to Vitality',
       '+50 to Life',
-      '+0.625-61.875 to Mana (Based on Character Level)',
+      '+(0.625 per Character Level) to Mana (Based on Character Level)',
       'All Resistances +5-20',
       '12-25% Better Chance of Getting Magic Items'
     ]
@@ -653,7 +653,7 @@ export const runeWordData = [
     'ladderOnly': true,
     'properties': [
       'Level 15 Thorns Aura When Equipped',
-      '+35% Increased Attack Soeed',
+      '+35% Increased Attack Speed',
       '+320-380% Damage to Demons',
       '+280% Damage to Undead',
       '+75 Poison Damage over 5 Seconds',
@@ -684,12 +684,12 @@ export const runeWordData = [
       '+45% Faster Run/Walk',
       '+1 to Teleport',
       '+750-775 Defense',
-      '(+0.75 per Character Level) +0-74 to Strength (Based on Character Level)',
+      '+(0.75 per Character Level) to Strength (Based on Character Level)',
       'Increase Maximum Life 5%',
       'Damage Reduced by 8%',
       '+14 Life After Each Kill',
       '15% Damage Taken Goes to Mana',
-      '(+1 per Character Level) +1-99% Better Chance of Getting Magic Items (Based on Character Level)'
+      '(1% per Character Level) Better Chance of Getting Magic Items (Based on Character Level)'
     ]
   },
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -876,7 +876,7 @@ export const runeWordData = [
       '+300% Enhanced Damage',
       '+200% Enhanced Defense',
       '+15 Defense',
-      '+X to Life (Based on Character Level)',
+      '+(1-1.5 per Character Level) to Life (Based on Character Level)',
       'Replenish Life +7',
       '+5% to Maximum Lightning Resist',
       'All Resistances +25-30',
@@ -920,7 +920,7 @@ export const runeWordData = [
       '20% Deadly Strike',
       'Hit Causes Monster to Flee 25%',
       '+200% Enhanced Defense',
-      '+X to Life (Based on Character Level)',
+      '+(1-1.5 per Character Level) to Life (Based on Character Level)',
       'All Resistances +25-30',
       '12% Damage Taken Goes to Mana',
       '+1 to Light Radius'
@@ -1018,7 +1018,7 @@ export const runeWordData = [
       'Damage +340-400',
       'Ignore Target\'s Defense',
       '-25% Target Defense',
-      '(+1.875 per character level) 1.875-185.625% Damage to Demons (Based on Character Level)',
+      '+(1.875% per Character Level) Damage to Demons (Based on Character Level)',
       'Adds 5-30 Fire Damage',
       '-20-25% to Enemy Poison Resist',
       '20% Deadly Strike',
@@ -1127,7 +1127,7 @@ export const runeWordData = [
       '+40% Faster Cast Rate',
       '+75% Damage to Demons',
       '+100 to Attack Rating Against Demons',
-      'Adds 3-14 Cold Damage, 3 sec. Duration (Normal)',
+      'Adds 3-14 Cold Damage',
       '7% Mana Stolen per Hit',
       '+10 to Dexterity',
       'Replenish Life +20',
@@ -1161,8 +1161,8 @@ export const runeWordData = [
       '+10 to Maximum Damage',
       '-25% Target Defense',
       'Adds 5-30 Fire Damage',
-      '21-110 Lightning Damage',
-      '+75 Poison Damage for 5 seconds',
+      'Adds 21-110 Lightning Damage',
+      '+75 Poison Damage over 5 seconds',
       '+3 to Holy Shock (Paladin Only)',
       '+5 to Maximum Lightning Resist',
       '+60% Lightning Resist',
@@ -1238,7 +1238,7 @@ export const runeWordData = [
       '7% Life Stolen per Hit',
       '-20% to Enemy Cold Resist',
       '20% Deadly Strike',
-      '3.125-309.375 Extra Gold from Monsters (Based on Character Level)'
+      '(3.125% per Character Level) Extra Gold from Monsters (Based on Character Level)'
     ]
   },
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1268,7 +1268,7 @@ export const runeWordData = [
       '-(45-55)% to Enemy Lightning Resist',
       '40% Chance of Crushing Blow',
       'Prevent Monster Heal',
-      '0.5-49.5 to Vitality (Based on Character Level)',
+      '+(0.5 per Character Level) to Vitality (Based on Character Level)',
       '30% Better Chance of Getting Magic Items',
       'Level 21 Cyclone Armor (30 Charges)'
     ]
@@ -1300,7 +1300,7 @@ export const runeWordData = [
       '+9 to Minimum Damage',
       '180-250% Bonus to Attack Rating',
       'Adds 5-30 Fire Damage',
-      '+75 Poison Damage Over 5 Seconds',
+      '+75 Poison Damage over 5 Seconds',
       '+1-6 to Critical Strike',
       '+5 to All Attributes',
       '+2 to Mana After Each Kill',
@@ -1329,12 +1329,12 @@ export const runeWordData = [
     'properties': [
       '+100% Enhanced Damage',
       '+150 to Attack Rating',
-      '+100% Damage Against Demons',
+      '+100% Damage to Demons',
       '+100 to Attack Rating Against Demons',
-      '+50% Damage Against Undead',
+      '+50% Damage to Undead',
       '+100 to Attack Rating Against Undead',
       'Adds 5-30 Fire Damage',
-      'Adds 3-14 Cold Damage for 3 seconds',
+      'Adds 3-14 Cold Damage',
       '7% Life Stolen per hit'
     ]
   },
@@ -1404,7 +1404,7 @@ export const runeWordData = [
       '60-70% Chance of Crushing Blow',
       'Prevent Monster Heal',
       'Hit Blinds Target',
-      '(+0.5 per character level) 0.5-49.5% Chance of Getting Magic Items (Based on Character Level)'
+      '(0.5% per Character Level) Better Chance of Getting Magic Items (Based on Character Level)'
     ]
   },
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1463,7 +1463,7 @@ export const runeWordData = [
       '+3 to Inferno (Sorceress Only)',
       '+3 to Warmth (Sorceress Only)',
       '+3 to Fire Bolt (Sorceress Only)',
-      '(+2 per Character Level) +2-198 to Defense (Based on Character Level)',
+      '+(2 per Character Level) to Defense (Based on Character Level)',
       'Cold Resist +33%',
       '+2 to Mana After Each Kill'
     ]
@@ -1727,7 +1727,7 @@ export const runeWordData = [
       '40% Faster Hit Recovery',
       '+370% Enhanced Damage',
       '-25% Target Defense',
-      'Adds 3-14 Cold Damage 3 Second Duration (Normal)',
+      'Adds 3-14 Cold Damage',
       '-25% to Enemy Fire Resist',
       '40% Chance of Crushing Blow',
       '+200-300 Defense',
@@ -1894,14 +1894,14 @@ export const runeWordData = [
       '25% Chance to Cast Level 17 Fire Wall When Struck',
       'Level 16-20 Concentration Aura When Equipped',
       '260-300% Bonus to Attack Rating',
-      '+1-99% Damage to Demons (Based on Character Level)',
+      '+(1% per Character Level) Damage to Demons (Based on Character Level)',
       'Adds 50-280 Lightning Damage',
       '20% Deadly Strike',
       'Hit Blinds Target',
       'Freezes Target +3',
       '+10 to Vitality',
       'Replenish Life +8',
-      '1.875-185.625% Extra Gold from Monsters (Based on Character Level)'
+      '(1.875% per Character Level) Extra Gold from Monsters (Based on Character Level)'
     ]
   },
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2056,7 +2056,7 @@ export const runeWordData = [
       '20% Bonus to Attack Rating',
       'Adds 160-250 Magic Damage',
       'Adds 60-180 Fire Damage',
-      '+5-10 to All Stats',
+      '+5-10 to All Attributes',
       '+10 to Dexterity',
       '38% Damage Taken Goes to Mana',
       '75% Extra Gold from Monsters',
@@ -2213,8 +2213,8 @@ export const runeWordData = [
       '+25-35% Faster Cast Rate',
       '+55% Faster Hit Recovery',
       'Adds 1-50 Lightning Damage',
-      'Adds 3-14 Cold Damage 3 Second Duration (Normal)',
-      '+75 Poison Damage Over 5 Seconds',
+      'Adds 3-14 Cold Damage',
+      '+75 Poison Damage over 5 Seconds',
       '7% Life Stolen per Hit',
       '+250 Defense vs. Missiles',
       '+22 to Vitality',
@@ -2421,7 +2421,7 @@ export const runeWordData = [
     'ladderOnly': false,
     'properties': [
       'Ignore Target\'s Defense',
-      '+273 Poison Damage Over 6 seconds',
+      '+273 Poison Damage over 6 seconds',
       '7% Mana Stolen per Hit',
       'Prevent Monster Heal',
       'Hit Causes Monster to Flee 25%',
@@ -2504,7 +2504,7 @@ export const runeWordData = [
     'requiredLevel': 35,
     'ladderOnly': false,
     'properties': [
-      '+3 to Poison and Bone Spells (Necromancer Only)',
+      '+3 to Poison and Bone Skills (Necromancer Only)',
       '20% Faster Cast Rate',
       '+2 to Bone Spear (Necromancer Only)',
       '+4 to Skeleton Mastery (Necromancer Only)',
