@@ -13,13 +13,22 @@ All of the data for this application is static in an exported TypeScript variabl
 
 ## How to Set Up and Run Locally with Ionic
 ### Prerequisites
-+ Make sure [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/), and [npm](https://www.npmjs.com/) are installed and configured on your machine.
+- Make sure [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/), and [npm](https://www.npmjs.com/) are installed and configured on your machine.
 
-+ Use `npm` to install [Ionic](https://ionicframework.com/) with the command:
+- Use `npm` to install [Ionic](https://ionicframework.com/) with the command:
 ``` bash
-npm install -g @ionic/cli
+npm i -g @ionic/cli
 ```
 Refer to [Ionic's getting started guide](https://ionicframework.com/getting-started/).
+
+### Environment Setup
+This project requires some legacy tools and Node.js version 14.
+
+Ubuntu users, for example, can install the required packages using the following commands (assuming [nvm](https://github.com/nvm-sh/nvm) is installed):
+```bash
+sudo apt-get install python2 build-essential
+nvm install 14
+```
 
 ### Steps
 1. Clone this repository to a location of your choosing with:
@@ -29,12 +38,12 @@ git clone https://github.com/abaran30/rune2word.git
 
 2. Inside the cloned directory, run:
 ``` bash
-npm install
+npm i
 ```
 
 3. Once the npm packages have been installed, run:
 ``` bash
-ionic serve
+npm start
 ```
 
 4. The application will start locally and your browser will open up to http://localhost:8100. If all went well, you will be in Rune2Word!
