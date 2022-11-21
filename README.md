@@ -1,5 +1,5 @@
 
-> **This app has been built with Ionic 3.9.2 (Angular 5.0.3). For the time being, this app will only be updated with bug fixes and vulnerability patches.**
+> **This app has been built with Ionic 3.9.2 (Angular 5.0.3) and will no longer be receiving updates. Thank you for all of your support and feedback on this fun, personal project made available to you. 🙂**
 
 # Rune2Word
 
