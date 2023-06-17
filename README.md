@@ -1,5 +1,5 @@
 
-> **This app has been built with Ionic 3.9.2 (Angular 5.0.3) and will no longer be receiving updates. Thank you for all of your support and feedback on this fun, personal project made available to you. 🙂**
+> **This app will no longer be receiving updates. Thank you for all of your support and feedback on this fun, personal project made available to you. 🙂**
 
 # Rune2Word
 
@@ -58,10 +58,6 @@ npm test
 ```
 
 The unit testing is configured to generate an HTML coverage report. This report can be found in the `coverage` directory after unit tests have been run. Open `coverage/index.html` with your favorite browser, and you will see a detailed report of unit test coverage for this app.
-
-## Downloading the App
-
-Rune2Word is available to download from [Google Play](https://play.google.com/store/apps/details?id=io.ionic.rune2word).
 
 ## Disclaimer
 
