@@ -38,7 +38,7 @@ git clone https://github.com/abaran30/rune2word.git
 
 2. Inside the cloned directory, run:
 ``` bash
-npm i
+npm ci
 ```
 
 3. Once the npm packages have been installed, run:
