@@ -1,0 +1,7 @@
+{
+  "name": "rune2word",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

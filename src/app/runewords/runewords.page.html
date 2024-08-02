@@ -1,0 +1,141 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Rune Words</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="trigger-popover">
+        <ion-icon slot="icon-only" name="funnel"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-popover #popover trigger="trigger-popover" triggerAction="click">
+      <ng-template>
+        <ion-content class="ion-padding">
+          <ion-list>
+            <ion-item>
+              <ion-select
+                [(ngModel)]="filters.selectedItemTypes"
+                multiple="true"
+                cancelText="Cancel"
+                okText="OK">
+                <div slot="label">Item Types</div>
+                <ion-select-option value="Armor">Armor</ion-select-option>
+                <ion-select-option value="Helm">Helm</ion-select-option>
+                <ion-select-option value="Shield">Shield</ion-select-option>
+                <ion-select-option value="Weapon">Weapon</ion-select-option>
+              </ion-select>
+            </ion-item>
+            @if (weaponItemTypeIsSelected()) {
+              <ion-item>
+                <ion-select
+                  [(ngModel)]="filters.selectedWeaponClasses"
+                  multiple="true"
+                  cancelText="Cancel"
+                  okText="OK">
+                  <div slot="label">Weapon Classes</div>
+                  <ion-select-option value="Axe">Axe</ion-select-option>
+                  <ion-select-option value="Claw">Claw</ion-select-option>
+                  <ion-select-option value="Club">Club</ion-select-option>
+                  <ion-select-option value="Hammer">Hammer</ion-select-option>
+                  <ion-select-option value="Mace">Mace</ion-select-option>
+                  <ion-select-option value="Missile">Missile</ion-select-option>
+                  <ion-select-option value="Orb">Orb</ion-select-option>
+                  <ion-select-option value="Polearm">Polearm</ion-select-option>
+                  <ion-select-option value="Scepter">Scepter</ion-select-option>
+                  <ion-select-option value="Staff">Staff</ion-select-option>
+                  <ion-select-option value="Sword">Sword</ion-select-option>
+                  <ion-select-option value="Wand">Wand</ion-select-option>
+                </ion-select>
+              </ion-item>
+            }
+            <ion-item>
+              <ion-select
+                [(ngModel)]="filters.numberOfSockets"
+                multiple="true"
+                cancelText="Cancel"
+                okText="OK">
+                <div slot="label">No. of Sockets</div>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option>
+                <ion-select-option value="6">6</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-select
+                [(ngModel)]="filters.selectedRunes"
+                multiple="true"
+                cancelText="Cancel"
+                okText="OK">
+                <div slot="label">Runes</div>
+                @for (rune of runes; track $index) {
+                  <ion-select-option value="{{ rune }}">
+                    {{ rune }}
+                  </ion-select-option>
+                }
+              </ion-select>
+            </ion-item>
+            <div class="float-right">
+              <ion-button color="dark" (click)="clearFilters()">
+                Clear
+              </ion-button>
+              <ion-button color="primary" (click)="dismissFilterPopover()">
+                OK
+              </ion-button>
+            </div>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar
+      [animated]="true"
+      [debounce]="300"
+      (ionInput)="searchRunewordItems($event.target.value)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-list>
+    @for (
+      item of runewordItems
+        | runewordFilter
+          : filters.selectedItemTypes
+          : filters.selectedWeaponClasses
+          : filters.numberOfSockets
+          : filters.selectedRunes;
+      track item.id
+    ) {
+      <ion-item (click)="openModal(item)">
+        <ion-label>
+          <div class="flex-container">
+            <div class="block-container">
+              <div class="unique-color">{{ item.name }}</div>
+              <div class="light-text">{{ getItemRuneword(item) }}</div>
+            </div>
+            <img
+              class="item-type-icon"
+              [src]="getItemTypeIconPath(item.itemType)" />
+          </div>
+        </ion-label>
+      </ion-item>
+    }
+    @if (
+      (
+        runewordItems
+        | runewordFilter
+          : filters.selectedItemTypes
+          : filters.selectedWeaponClasses
+          : filters.numberOfSockets
+          : filters.selectedRunes
+      ).length === 0
+    ) {
+      <div class="ion-text-center">
+        <p>No Rune Words found</p>
+      </div>
+    }
+  </ion-list>
+</ion-content>

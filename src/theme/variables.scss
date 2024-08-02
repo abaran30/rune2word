@@ -1,0 +1,16 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+@font-face {
+  font-family: SpectralSC;
+  src: url('../assets/spectralsc.woff2') format('woff2');
+}
+
+:root {
+  --ion-color-primary: #898071;
+  --ion-color-primary-contrast: #fff;
+  --ion-color-success: #222;
+  --ion-color-dark: #222;
+  --ion-color-dark-contrast: #fff;
+  --ion-font-family: SpectralSC;
+}

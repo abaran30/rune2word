@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="unique-color">{{ runewordItem.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ion-text-center">
+  <p class="main-text unique-color">{{ getItemRuneword() }}</p>
+  @for (rune of runewordItem.runes; track $index) {
+    <img [src]="getRuneImagePath(rune)" />
+  }
+  <p>Sockets: {{ runewordItem.sockets }}</p>
+  <p>Required level: {{ getLevelRequirementText() }}</p>
+  <p>Item type: {{ runewordItem.itemType }}</p>
+  @if (runewordItem.itemType === 'Weapon') {
+    <p>Weapon class: {{ getWeaponTypesText() }}</p>
+  }
+  @if (runewordItem.ladderOnly) {
+    <p class="main-text invalid-color">Ladder Only</p>
+  }
+  @for (property of runewordItem.properties; track $index) {
+    <p class="main-text magic-text">
+      <span class="property-bullet">&#9642;</span> {{ property }}
+    </p>
+  }
+</ion-content>
