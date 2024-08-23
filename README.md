@@ -6,7 +6,7 @@ Rune2Word is a mobile application that allows *Diablo II: Lord of Destruction* p
 
 This application was developed using [Ionic](https://ionicframework.com/).
 
-All of the data for this application is static in an exported TypeScript variable (found in `src/app/data/runeword-data.ts`). Because the game was released in 2001, and the data has not changed in a significant amount of time, I found this approach more feasible than creating an API.
+All of the data for this application is static in an exported TypeScript variable (found in `src/app/data/runeword-data.ts`).
 
 ## Disclaimer
 

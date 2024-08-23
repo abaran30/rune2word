@@ -22,7 +22,7 @@ export class RunewordFilterPipe implements PipeTransform {
 
     if (selectedWeaponClasses && selectedWeaponClasses.length > 0) {
       items = items.filter(item =>
-        selectedWeaponClasses.every(weaponClass =>
+        selectedWeaponClasses.some(weaponClass =>
           item.itemType === 'Weapon' && item.itemTypeSecondary
             ? item.itemTypeSecondary.indexOf(weaponClass) > -1
             : false

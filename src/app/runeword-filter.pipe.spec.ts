@@ -91,6 +91,16 @@ describe('RunewordFilterPipe', () => {
     );
     expect(runewordsFilteredByWeaponClassClub.length).toEqual(6);
 
+    // Weapon Class: Dagger
+    const runewordsFilteredByWeaponClassDagger = pipe.transform(
+      runeWordDataService.getData(),
+      ['Weapon'],
+      ['Dagger'],
+      [],
+      []
+    );
+    expect(runewordsFilteredByWeaponClassDagger.length).toEqual(5);
+
     // Weapon Class: Hammer
     const runewordsFilteredByWeaponClassHammer = pipe.transform(
       runeWordDataService.getData(),
@@ -151,6 +161,16 @@ describe('RunewordFilterPipe', () => {
     );
     expect(runewordsFilteredByWeaponClassScepter.length).toEqual(18);
 
+    // Weapon Class: Spear
+    const runewordsFilteredByWeaponClassSpear = pipe.transform(
+      runeWordDataService.getData(),
+      ['Weapon'],
+      ['Spear'],
+      [],
+      []
+    );
+    expect(runewordsFilteredByWeaponClassSpear.length).toEqual(14);
+
     // Weapon Class: Staff
     const runewordsFilteredByWeaponClassStaff = pipe.transform(
       runeWordDataService.getData(),
@@ -179,7 +199,7 @@ describe('RunewordFilterPipe', () => {
       [],
       []
     );
-    expect(runewordsFilteredByWeaponClassWand.length).toEqual(3);
+    expect(runewordsFilteredByWeaponClassWand.length).toEqual(4);
 
     // Weapon Class: Axe and Sword
     const runewordsFilteredByWeaponClassAxeAndSword = pipe.transform(
@@ -189,7 +209,7 @@ describe('RunewordFilterPipe', () => {
       [],
       []
     );
-    expect(runewordsFilteredByWeaponClassAxeAndSword.length).toEqual(21);
+    expect(runewordsFilteredByWeaponClassAxeAndSword.length).toEqual(29);
 
     // All Weapon Classes
     const runewordsFilteredByAllWeaponClasses = pipe.transform(
@@ -199,12 +219,14 @@ describe('RunewordFilterPipe', () => {
         'Axe',
         'Claw',
         'Club',
+        'Dagger',
         'Hammer',
         'Mace',
         'Missile',
         'Orb',
         'Polearm',
         'Scepter',
+        'Spear',
         'Staff',
         'Sword',
         'Wand',
@@ -212,7 +234,7 @@ describe('RunewordFilterPipe', () => {
       [],
       []
     );
-    expect(runewordsFilteredByAllWeaponClasses.length).toEqual(0);
+    expect(runewordsFilteredByAllWeaponClasses.length).toEqual(49);
 
     // Edge case: Filtering by Weapon Classes when the "Weapon" Item Type has not been selected should still succeed
     const runewordsFilteredByAllWeaponClassesWithoutWeaponItemType =
@@ -223,12 +245,14 @@ describe('RunewordFilterPipe', () => {
           'Axe',
           'Claw',
           'Club',
+          'Dagger',
           'Hammer',
           'Mace',
           'Missile',
           'Orb',
           'Polearm',
           'Scepter',
+          'Spear',
           'Staff',
           'Sword',
           'Wand',
@@ -238,7 +262,7 @@ describe('RunewordFilterPipe', () => {
       );
     expect(
       runewordsFilteredByAllWeaponClassesWithoutWeaponItemType.length
-    ).toEqual(0);
+    ).toEqual(49);
   });
 
   it('should transform input based on No. of Sockets', () => {

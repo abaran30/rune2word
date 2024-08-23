@@ -18,27 +18,28 @@ describe('ItemModalComponent', () => {
       'Axe',
       'Hammer',
       'Mace',
+      'Missile',
       'Polearm',
+      'Spear',
       'Staff',
       'Sword',
-      'Missile',
     ],
     requiredLevel: 69,
     ladderOnly: false,
     properties: [
-      '35% Chance to Cast Level 20 Poison Nova When You Kill an Enemy',
+      '50% Chance To Cast Level 20 Poison Nova When You Kill An Enemy',
       'Indestructible',
       '+60% Increased Attack Speed',
       '+350-400% Enhanced Damage',
-      '+200% Damage to Undead',
+      '+200% Damage To Undead',
       '-25% Target Defense',
-      '+50 to Attack Rating',
-      '+50 to Attack Rating Against Undead',
-      '7% Mana Stolen per Hit',
-      '12-15% Life Stolen per Hit',
+      '+50 To Attack Rating',
+      '+50 To Attack Rating Against Undead',
+      '7% Mana Stolen Per Hit',
+      '12-15% Life Stolen Per Hit',
       'Prevent Monster Heal',
-      '+30 to All Attributes',
-      '+1 to Light Radius',
+      '+30 To All Attributes',
+      '+1 To Light Radius',
       'Requirements -20%',
     ],
   };
@@ -74,7 +75,7 @@ describe('ItemModalComponent', () => {
     expect(runewordData[2].textContent).toContain('Required level: 69 (Zod)');
     expect(runewordData[3].textContent).toContain('Item type: Weapon');
     expect(runewordData[4].textContent).toContain(
-      'Weapon class: Axe, Hammer, Mace, Polearm, Staff, Sword, Missile'
+      'Weapon class: Axe, Hammer, Mace, Missile, Polearm, Spear, Staff, Sword'
     );
     expect(nativeElement.querySelector('p.invalid-color')).toBeFalsy();
     expect(nativeElement.querySelectorAll('p.magic-text').length).toBe(14);

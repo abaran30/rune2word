@@ -1,6 +1,6 @@
 {
   "name": "rune2word",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "author": "Adrian Baran (using Ionic Framework)",
   "scripts": {
     "ng": "ng",
