@@ -17,7 +17,6 @@ describe('ItemModalComponent', () => {
     itemTypeSecondary: [
       'Axe',
       'Hammer',
-      'Mace',
       'Missile',
       'Polearm',
       'Spear',
@@ -75,7 +74,7 @@ describe('ItemModalComponent', () => {
     expect(runewordData[2].textContent).toContain('Required level: 69 (Zod)');
     expect(runewordData[3].textContent).toContain('Item type: Weapon');
     expect(runewordData[4].textContent).toContain(
-      'Weapon class: Axe, Hammer, Mace, Missile, Polearm, Spear, Staff, Sword'
+      'Weapon class: Axe, Hammer, Missile, Polearm, Spear, Staff, Sword'
     );
     expect(nativeElement.querySelector('p.invalid-color')).toBeFalsy();
     expect(nativeElement.querySelectorAll('p.magic-text').length).toBe(14);

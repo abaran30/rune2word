@@ -119,7 +119,7 @@ describe('RunewordFilterPipe', () => {
       [],
       []
     );
-    expect(runewordsFilteredByWeaponClassMace.length).toEqual(19);
+    expect(runewordsFilteredByWeaponClassMace.length).toEqual(17);
 
     // Weapon Class: Missile
     const runewordsFilteredByWeaponClassMissile = pipe.transform(
@@ -159,7 +159,7 @@ describe('RunewordFilterPipe', () => {
       [],
       []
     );
-    expect(runewordsFilteredByWeaponClassScepter.length).toEqual(18);
+    expect(runewordsFilteredByWeaponClassScepter.length).toEqual(17);
 
     // Weapon Class: Spear
     const runewordsFilteredByWeaponClassSpear = pipe.transform(
@@ -179,7 +179,7 @@ describe('RunewordFilterPipe', () => {
       [],
       []
     );
-    expect(runewordsFilteredByWeaponClassStaff.length).toEqual(17);
+    expect(runewordsFilteredByWeaponClassStaff.length).toEqual(18);
 
     // Weapon Class: Sword
     const runewordsFilteredByWeaponClassSword = pipe.transform(

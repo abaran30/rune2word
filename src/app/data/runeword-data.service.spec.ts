@@ -30,12 +30,11 @@ describe('RunewordDataService', () => {
       itemTypeSecondary: [
         'Axe',
         'Hammer',
-        'Mace',
+        'Missile',
         'Polearm',
         'Spear',
         'Staff',
         'Sword',
-        'Missile',
       ],
       requiredLevel: 69,
       ladderOnly: false,
