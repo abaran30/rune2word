@@ -6,6 +6,7 @@ export interface RunewordItem {
   highestRune: string;
   itemType: string;
   itemTypeSecondary?: string[];
+  additionalNotes?: string;
   requiredLevel: number;
   ladderOnly: boolean;
   properties: string[];

@@ -19,6 +19,9 @@
   @if (runewordItem.itemType === 'Weapon') {
     <p>Weapon class: {{ getWeaponTypesText() }}</p>
   }
+  @if (runewordItem.additionalNotes) {
+    <p>Note: {{ runewordItem.additionalNotes }}</p>
+  }
   @if (runewordItem.ladderOnly) {
     <p class="main-text invalid-color">Ladder Only</p>
   }

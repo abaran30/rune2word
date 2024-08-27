@@ -70,5 +70,5 @@ testem.log
 Thumbs.db
 
 # Android
-android
-assets
+/android
+/assets

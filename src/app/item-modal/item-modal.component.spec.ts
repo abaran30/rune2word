@@ -80,6 +80,22 @@ describe('ItemModalComponent', () => {
     expect(nativeElement.querySelectorAll('p.magic-text').length).toBe(14);
   });
 
+  it('should display additional notes', () => {
+    const fixture = TestBed.createComponent(ItemModalComponent);
+    const component = fixture.componentInstance;
+    const mockLadderOnlyRuneword: RunewordItem = {
+      ...mockRuneword,
+      additionalNotes: 'Additional note',
+    };
+    component.runewordItem = mockLadderOnlyRuneword;
+    fixture.detectChanges();
+    expect(component).toBeTruthy();
+    const nativeElement = fixture.nativeElement;
+    expect(nativeElement.querySelectorAll('p')[5].textContent).toContain(
+      'Note: Additional note'
+    );
+  });
+
   it('should display "Ladder Only" text', () => {
     const fixture = TestBed.createComponent(ItemModalComponent);
     const component = fixture.componentInstance;
